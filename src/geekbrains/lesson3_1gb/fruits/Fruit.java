@@ -1,5 +1,7 @@
 package geekbrains.lesson3_1gb.fruits;
 
+
+
 public abstract class Fruit {
     private float weight;
 

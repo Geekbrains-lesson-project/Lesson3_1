@@ -10,6 +10,7 @@ import java.util.Arrays;
 public class Main {
 
     public static void main(String[] args) {
+
         //1. Задача
         String[] array = new String[] {
                 "Зрелый фрукт", "Гнилой фрукт", "Сойдет","Кислятина"
@@ -18,6 +19,8 @@ public class Main {
         for (int i = 0; i < array.length; i++) {
             System.out.println(array[i]);
         }
+
+
         //индексы для пермешивания
         swapArrayElements(array, 1, 3);
 
@@ -26,9 +29,11 @@ public class Main {
             System.out.println(array[i]);
         }
 
+
         // 2. Задача:
         System.out.println();
         System.out.println(convertToArrayList(array));
+
 
         // 3. Большая задача:
         System.out.println();
@@ -74,6 +79,7 @@ public class Main {
         System.out.println("******");
 
     }
+
 
     // 1. Написать метод, который меняет два элемента массива местами.(массив может быть любого ссылочного типа)
     static <T> T[] swapArrayElements(T[] array, int indexFirst, int indexSecond) {
