@@ -5,9 +5,11 @@ import geekbrains.lesson3_1gb.fruits.FruitStore;
 
 import java.util.ArrayList;
 
+
 // b. Класс Box в который можно складывать фрукты, коробки условно сортируются по типу фрукта,
 // поэтому в одну коробку нельзя сложить и яблоки, и апельсины;
 public class Box<T extends Fruit> implements FruitStore<T> {
+
 
     //c. Для хранения фруктов внутри коробки можете использовать ArrayList
     private ArrayList<T> fruits;
@@ -16,6 +18,7 @@ public class Box<T extends Fruit> implements FruitStore<T> {
     public Box() {
         fruits = new ArrayList<>();
     }
+
 
     // d. Сделать метод getWeight() который высчитывает вес коробки,
     // зная количество фруктов и вес одного фрукта(вес яблока - 1.0f, апельсина - 1.5f, не важно в каких это единицах);
@@ -27,11 +30,13 @@ public class Box<T extends Fruit> implements FruitStore<T> {
         return sum;
     }
 
+
     // g. метод добавления фрукта в коробку.
     @Override
     public void addFruit(T fruit) {
         fruits.add(fruit);
     }
+
 
     // e. Внутри класса коробка сделать метод compare,
     // который позволяет сравнить текущую коробку с той,
@@ -42,6 +47,8 @@ public class Box<T extends Fruit> implements FruitStore<T> {
         if (this.getWeight() == nextBox.getWeight()) return true;
         return false;
     }
+
+
 
     //f. Написать метод, который позволяет пересыпать фрукты из текущей коробки в другую коробку
     // (помним про сортировку фруктов, нельзя яблоки высыпать в коробку с апельсинами),
